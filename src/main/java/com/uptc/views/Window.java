@@ -12,18 +12,16 @@ public class Window extends JFrame {
     	 * 
     	 */
     private static final long serialVersionUID = 1L;
-    private static final int WIDTH = 1200;
+    private static final int WIDTH = 580;
     private static final int HEIGHT = 580;
     private TabPanel tabs;
 
     public Window(ActionListener listener) {
-        this.setTitle("Pseudo-aleatory Generator");
-        // this.setIconImage(new
-        // ImageIcon(getClass().getResource(ConstantsGUI.PATH_ICON_FRAME)).getImage());
+        this.setTitle("Generador pseudoaleatorio");
         this.setMinimumSize(new Dimension(WIDTH, HEIGHT));
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        // this.setExtendedState(MAXIMIZED_BOTH);
+    
         initComponents(listener);
     }
 
@@ -62,24 +60,17 @@ public class Window extends JFrame {
     }
 
     public void setGraphicData(List<Double> ri) {
-        tabs.setGraphicData(ri);
+        new GraphicPanel("Ri").setData(ri);
     }
 
-    public void resetMiddleGraphic() {
-        tabs.resetMiddleGraphic();
-    }
 
     // Linear
-    public void resetLinearGraphic() {
-        tabs.resetLinearGraphic();
-    }
-
     public void resetLinearTable() {
         tabs.resetLinearTable();
     }
 
     public void setLinearGraphicData(List<Double> interval) {
-        tabs.setLinearGraphicData(interval);
+        tabs.setLinearGraphicData(interval, "Lineal");
     }
 
     public void setLinearTableRow(Object[] element) {
@@ -91,12 +82,8 @@ public class Window extends JFrame {
         tabs.resetMultiplicativeTable();
     }
 
-    public void resetMultiplicativeGraphic() {
-        tabs.resetMultiplicativeGraphic();
-    }
-
     public void setMultiplicativeGraphicData(List<Double> interval) {
-        tabs.setMultiplicativeGraphicData(interval);
+        tabs.setMultiplicativeGraphicData(interval, "Multiplicativa");
     }
 
     public void setMultiplicativeTableRow(Object[] element) {
@@ -108,12 +95,8 @@ public class Window extends JFrame {
         tabs.resetUniformTable();
     }
 
-    public void resetUniformGraphic() {
-        tabs.resetUniformGraphic();
-    }
-
     public void setUniformGraphicData(List<Double> interval) {
-        tabs.setUniformGraphicData(interval);
+        tabs.setUniformGraphicData(interval, "Uniforme");
     }
 
     public void setUniformTableRow(Object[] element) {
@@ -130,11 +113,7 @@ public class Window extends JFrame {
         tabs.resetNormalTable();
     }
 
-    public void resetNormalGraphic() {
-        tabs.resetNormalGraphic();
-    }
-
     public void setNormalGraphicData(List<Double> interval) {
-        tabs.setNormalGraphicData(interval);
+        tabs.setNormalGraphicData(interval, "Normal");
     }
 }

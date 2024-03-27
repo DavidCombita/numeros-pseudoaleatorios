@@ -86,7 +86,6 @@ public class Controller implements ActionListener {
 
     private void manageUniformTable(List<Double> aleatory, List<Double> interval) {
         window.resetUniformTable();
-        window.resetUniformGraphic();
         window.setUniformGraphicData(interval);
         List<Object[]> elements = Ulitities.toObjectArrayList(aleatory, interval);
         for (Object[] element : elements) {
@@ -106,7 +105,6 @@ public class Controller implements ActionListener {
 
     private void manageNormalTable(List<Double> seeds, List<Double> normList) {
         window.resetNormalTable();
-        window.resetNormalGraphic();
         window.setNormalGraphicData(normList);
         List<Object[]> elements = Ulitities.toObjectArrayList(seeds, normList);
         for (Object[] element : elements) {
@@ -128,7 +126,6 @@ public class Controller implements ActionListener {
 
     private void manageMultiplicativeTable(List<Integer> seeds, List<Double> aleatory, List<Double> interval) {
         window.resetMultiplicativeTable();
-        window.resetMultiplicativeGraphic();
         window.setMultiplicativeGraphicData(interval);
         List<Object[]> elements = Ulitities.toObjectArrayList(seeds, aleatory, interval);
         for (Object[] element : elements) {
@@ -148,7 +145,6 @@ public class Controller implements ActionListener {
 
     private void manageLinearTable(List<Integer> seeds, List<Double> aleatory, List<Double> interval) {
         window.resetLinearTable();
-        window.resetLinearGraphic();
         window.setLinearGraphicData(interval);
         List<Object[]> elements = Ulitities.toObjectArrayList(seeds, aleatory, interval);
         for (Object[] element : elements) {
@@ -168,7 +164,6 @@ public class Controller implements ActionListener {
 
     private void manageMiddleTable(List<Integer> xi, List<Double> ri, List<Double> ni) {
         window.resetMiddleTable();
-        window.resetMiddleGraphic();
         window.setGraphicData(ni);
         List<Object[]> elements = Ulitities.toObjectArrayList(xi, ri, ni);
         for (Object[] element : elements) {

@@ -23,7 +23,7 @@ public class JPTable extends JPanel {
 	public JPTable() {
 		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 		this.setBackground(Color.decode("#30373D"));
-		this.setPreferredSize(new Dimension(500, 570));
+		this.setPreferredSize(new Dimension(580, 500));
 		initComponents();
 	}
 

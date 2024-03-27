@@ -8,7 +8,6 @@ public class MethodPanel extends JPanel {
 
     private Header header;
     private JPTable table;
-    private GraphicPanel graphic;
 
     public MethodPanel(Header header) {
         this.header = header;
@@ -21,9 +20,6 @@ public class MethodPanel extends JPanel {
 
         table = new JPTable();
         this.add(table, BorderLayout.WEST);
-
-        graphic = new GraphicPanel();
-        this.add(graphic, BorderLayout.CENTER);
     }
 
     public Header getHeader() {
@@ -38,12 +34,8 @@ public class MethodPanel extends JPanel {
         table.deleteTable();
     }
 
-    public void setGraphicData(List<Double> data) {
-        graphic.setData(data);
-    }
-
-    public void resetGraphic() {
-        graphic.resetGraphic();
+    public void setGraphicData(List<Double> data, String titulo) {
+       new GraphicPanel(titulo).setData(data);
     }
 
     public void setTableHeader(String[] header) {

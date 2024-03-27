@@ -66,21 +66,13 @@ public class TabPanel extends JTabbedPane {
         midSquare.resetTable();
     }
 
-    public void setGraphicData(List<Double> data) {
-        midSquare.setGraphicData(data);
-    }
-
-    public void resetMiddleGraphic() {
-        midSquare.resetGraphic();
+    public void setGraphicData(List<Double> data, String titulo) {
+        new GraphicPanel(titulo).setData(data);
     }
 
     // Linear
-    public void resetLinearGraphic() {
-        linear.resetGraphic();
-    }
-
-    public void setLinearGraphicData(List<Double> interval) {
-        linear.setGraphicData(interval);
+    public void setLinearGraphicData(List<Double> interval, String titulo) {
+        new GraphicPanel(titulo).setData(interval);
     }
 
     public void setLinearTableRow(Object[] element) {
@@ -92,17 +84,12 @@ public class TabPanel extends JTabbedPane {
     }
 
     // Multiplicative
-
     public void resetMultiplicativeTable() {
         multiplicative.resetTable();
     }
 
-    public void resetMultiplicativeGraphic() {
-        multiplicative.resetGraphic();
-    }
-
-    public void setMultiplicativeGraphicData(List<Double> interval) {
-        multiplicative.setGraphicData(interval);
+    public void setMultiplicativeGraphicData(List<Double> interval, String titulo) {
+        new GraphicPanel(titulo).setData(interval);
     }
 
     public void setMultiplicativeTableRow(Object[] element) {
@@ -114,12 +101,8 @@ public class TabPanel extends JTabbedPane {
         uniform.resetTable();
     }
 
-    public void resetUniformGraphic() {
-        uniform.resetGraphic();
-    }
-
-    public void setUniformGraphicData(List<Double> interval) {
-        uniform.setGraphicData(interval);
+    public void setUniformGraphicData(List<Double> interval, String titulo) {
+        new GraphicPanel(titulo).setData(interval);
     }
 
     public void setUniformTableRow(Object[] element) {
@@ -135,11 +118,7 @@ public class TabPanel extends JTabbedPane {
         normal.resetTable();
     }
 
-    public void resetNormalGraphic() {
-        normal.resetGraphic();
-    }
-
-    public void setNormalGraphicData(List<Double> interval) {
-        normal.setGraphicData(interval);
+    public void setNormalGraphicData(List<Double> interval, String titulo) {
+        new GraphicPanel(titulo).setData(interval);
     }
 }
